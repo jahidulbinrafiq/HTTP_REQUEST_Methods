@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUT method</title>
+    <style>
+        .align{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="align">JavaScript’s Fetch API</h1>
+    <h2 class="align">PUT method</h2>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/todos/5',{
+            method: 'PUT',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify({
+                userId: 1,
+                id: 5,
+                title:'hello fetch api',
+                completed: false
+            })
+        })
+        .then(response =>response.json())
+        .then(data =>console.log(data))
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST METHOD</title>
+    <style>
+        .align{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="align">JavaScript’s Fetch API</h1>
+    <h2 class="align">POST method</h2>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/todos',{
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify({
+                userId: 6,
+                id: 300,
+                title: "Learn fetch api",
+                completed: false
+            })
+        })
+        .then(response=>response.json())
+        .then(data=>console.log(data))
+
+    </script>
+</body>
+</html>

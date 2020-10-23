@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUT method</title>
+    <style>
+        .align{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="align">JavaScript’s Fetch API</h1>
+    <h2 class="align">PETCH method</h2>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/todos/1', {
+
+                method: 'PATCH',
+                headers: {'Content-type': 'application/json'},
+                body: JSON.stringify({
+                completed: true,
+                title:'we are going to learn PATCH method'
+                }),
+ 
+        })
+        
+        .then(response =>response.json())
+        .then(data =>console.log(data))
+    </script>
+</body>
+</html>
