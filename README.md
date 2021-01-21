@@ -1,4 +1,4 @@
-# Restful-API-Design
+# HTTP REQUEST Methods
 
 <p>
  Here we discuss the most commonly used HTTP methods POST, GET, PUT, PATCH, DELETE using javascript fetch api.
